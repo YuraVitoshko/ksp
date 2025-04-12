@@ -136,16 +136,24 @@ h6 {
 }
 .header {
   background-color: rgba(58,53,41,.7);
-  backdrop-filter: blur(10px);
   z-index: 50;
   position: fixed;
   top: 0;
   left: 0;
   width: 100%
 }
+.header::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3.4375rem;
+  backdrop-filter: blur(10px)
+}
 .header__container {
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
   -webkit-column-gap: 1.875rem;
   -moz-column-gap: 1.875rem;
   column-gap: 1.875rem;
@@ -154,6 +162,8 @@ h6 {
   justify-content: space-between
 }
 .header__logo {
+  position: relative;
+  z-index: 5;
   display: flex;
   align-items: center;
   -webkit-column-gap: .75rem;
@@ -185,7 +195,9 @@ h6 {
   align-items: center;
   -webkit-column-gap: .9375rem;
   -moz-column-gap: .9375rem;
-  column-gap: .9375rem
+  column-gap: .9375rem;
+  position: relative;
+  z-index: 5
 }
 .header__link svg {
   width: 1.5625rem;
@@ -227,8 +239,8 @@ h6 {
   display: none
 }
 .footer {
-  padding-top: .3125rem;
-  padding-bottom: .3125rem;
+  padding-top: .625rem;
+  padding-bottom: .625rem;
   background-color: #3a3529
 }
 .footer__container {
@@ -705,30 +717,32 @@ h6 {
   }
   .menu__body {
     position: fixed;
+    z-index: 2;
     width: 100%;
     height: 100%;
-    left: -100%;
+    right: -100%;
     top: 0;
     overflow: auto;
     padding: 5rem .9375rem .9375rem 1.875rem;
-    transition: left .3s;
+    transition: right .3s;
     background-color: #eee
   }
   .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
-    height: 4.25rem;
-    left: -100%;
+    height: 3.4375rem;
+    right: -100%;
     top: 0;
-    transition: left .3s;
-    z-index: 2
+    transition: right .3s;
+    z-index: 2;
+    background-color: #3a3529
   }
   .menu-open .menu__body {
-    left: 0
+    right: 0
   }
   .menu-open .menu__body::before {
-    left: 0
+    right: 0
   }
   .menu__list {
     flex-direction: column;
