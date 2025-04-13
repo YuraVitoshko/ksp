@@ -1170,8 +1170,8 @@ h6 {
     fill: #d6cba5
   }
   .brigades__column:hover .brigades__logo {
-    -webkit-transform: scale(1.4);
-    transform: scale(1.4)
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2)
   }
   .brigades__column:hover .brigades__name::before {
     width: 100%
