@@ -148,7 +148,7 @@ h6 {
   top: 0;
   left: 0;
   width: 100%;
-  height: 3.4375rem;
+  height: 4.1875rem;
   backdrop-filter: blur(10px)
 }
 .header__container {
@@ -218,6 +218,7 @@ h6 {
   column-gap: 1.875rem
 }
 .menu__link {
+  text-transform: uppercase;
   font-weight: 500;
   position: relative;
   font-size: .875rem;
@@ -401,10 +402,15 @@ h6 {
 }
 .about-us__title {
   line-height: 1.2;
-  font-weight: 700
+  font-weight: 700;
+  opacity: 0;
+  transition: opacity .8s
 }
 .about-us__title:not(:last-child) {
   margin-bottom: 2rem
+}
+.about-us__title._watcher-view {
+  opacity: 1
 }
 .about-us__text {
   display: flex;
@@ -416,8 +422,25 @@ h6 {
 .about-us__text span {
   font-weight: 700
 }
+.about-us__text p:nth-child(1) {
+  transition: opacity 1s
+}
+.about-us__text p:nth-child(2) {
+  transition: opacity 1.2s
+}
+.about-us__text p:nth-child(3) {
+  transition: opacity 1.4s
+}
+.about-us__text p {
+  opacity: 0
+}
+.about-us__text p._watcher-view {
+  opacity: 1
+}
 .about-us__image {
-  position: relative
+  position: relative;
+  opacity: 0;
+  transition: opacity .8
 }
 .about-us__image::before {
   content: "";
@@ -434,6 +457,9 @@ h6 {
   -o-object-fit: cover;
   object-fit: cover
 }
+.about-us__image._watcher-view {
+  opacity: 1
+}
 .engineering-cbrn {
   background-color: #4d4634
 }
@@ -449,7 +475,9 @@ h6 {
 .engineering-cbrn__image {
   position: relative;
   height: 31.25rem;
-  width: 100%
+  width: 100%;
+  opacity: 0;
+  transition: opacity .8s
 }
 .engineering-cbrn__image::before {
   content: "";
@@ -459,6 +487,9 @@ h6 {
   width: 100%;
   height: 100%;
   border: 2px solid #f39200
+}
+.engineering-cbrn__image._watcher-view {
+  opacity: 1
 }
 .engineering-cbrn__image img {
   width: 100%;
@@ -476,7 +507,12 @@ h6 {
 .engineering-cbrn__title {
   font-weight: 700;
   line-height: 1.1;
-  color: #fff
+  color: #fff;
+  opacity: 0;
+  transition: opacity .8s
+}
+.engineering-cbrn__title._watcher-view {
+  opacity: 1
 }
 .engineering-cbrn__text {
   line-height: 1.5;
@@ -500,7 +536,9 @@ h6 {
 .hydrometeorological-geospatial__image {
   position: relative;
   height: 31.25rem;
-  width: 100%
+  width: 100%;
+  opacity: 0;
+  transition: opacity .8
 }
 .hydrometeorological-geospatial__image::before {
   content: "";
@@ -517,6 +555,9 @@ h6 {
   -o-object-fit: cover;
   object-fit: cover
 }
+.hydrometeorological-geospatial__image._watcher-view {
+  opacity: 1
+}
 .hydrometeorological-geospatial__image--border::before {
   left: 1.0625rem
 }
@@ -527,7 +568,12 @@ h6 {
 .hydrometeorological-geospatial__title {
   font-weight: 700;
   line-height: 1.1;
-  color: #000
+  color: #000;
+  opacity: 0;
+  transition: opacity .8
+}
+.hydrometeorological-geospatial__title._watcher-view {
+  opacity: 1
 }
 .hydrometeorological-geospatial__text {
   line-height: 1.5;
@@ -543,10 +589,15 @@ h6 {
   text-align: center;
   font-weight: 700;
   line-height: 1.1;
-  color: #fff
+  color: #fff;
+  opacity: 0;
+  transition: opacity .8
 }
 .dog-service__title:not(:last-child) {
   margin-bottom: .9375rem
+}
+.dog-service__title._watcher-view {
+  opacity: 1
 }
 .dog-service__content {
   display: grid;
@@ -564,7 +615,9 @@ h6 {
 .dog-service__image {
   position: relative;
   height: 31.25rem;
-  width: 100%
+  width: 100%;
+  opacity: 0;
+  transition: opacity .8
 }
 .dog-service__image::before {
   content: "";
@@ -575,6 +628,9 @@ h6 {
   height: 100%;
   border: 2px solid #f39200
 }
+.dog-service__image._watcher-view {
+  opacity: 1
+}
 .dog-service__image img {
   width: 100%;
   height: 100%;
@@ -583,10 +639,19 @@ h6 {
 }
 .dog-service__text {
   line-height: 1.5;
-  color: #fff
+  color: #fff;
+  opacity: 0;
+  transition: opacity .8
 }
 .dog-service__text span {
   font-weight: 700
+}
+.dog-service__text._watcher-view {
+  opacity: 1
+}
+.dog-service__image-small {
+  opacity: 0;
+  transition: opacity .8
 }
 .dog-service__image-small img {
   width: 100%;
@@ -594,15 +659,23 @@ h6 {
   -o-object-fit: cover;
   object-fit: cover
 }
+.dog-service__image-small._watcher-view {
+  opacity: 1
+}
 .photo-block {
   width: 100%;
-  height: 37.5rem
+  height: 37.5rem;
+  opacity: 0;
+  transition: opacity .8
 }
 .photo-block img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover
+}
+.photo-block._watcher-view {
+  opacity: 1
 }
 @media (min-width:116.875em) {
   .header__text-logo {
@@ -697,10 +770,13 @@ h6 {
   }
 }
 @media (max-width:61.99875em) {
+  .header::before {
+    height: 3.5rem
+  }
   .header__container {
-    -webkit-column-gap: .9375rem;
-    -moz-column-gap: .9375rem;
-    column-gap: .9375rem
+    -webkit-column-gap: 0;
+    -moz-column-gap: 0;
+    column-gap: 0
   }
   .header__img-logo {
     flex: 0 0 2rem;
@@ -719,38 +795,38 @@ h6 {
     position: fixed;
     z-index: 2;
     width: 100%;
-    height: 100%;
-    right: -100%;
-    top: 0;
+    height: 13.125rem;
+    left: 0;
+    top: -100%;
     overflow: auto;
     padding: 5rem .9375rem .9375rem 1.875rem;
-    transition: right .3s;
-    background-color: #eee
+    transition: top .3s;
+    background-color: #3a3529
   }
   .menu__body::before {
     content: "";
     position: fixed;
     width: 100%;
     height: 3.4375rem;
-    right: -100%;
-    top: 0;
-    transition: right .3s;
+    left: 0;
+    top: -100%;
+    transition: top .3s;
     z-index: 2;
-    background-color: #3a3529
+    background-color: #3a3529;
+    border-bottom: .0625rem solid #000
   }
   .menu-open .menu__body {
-    right: 0
+    top: 0
   }
   .menu-open .menu__body::before {
-    right: 0
+    top: 0
   }
   .menu__list {
     flex-direction: column;
-    align-items: flex-end;
+    align-items: center;
     row-gap: .625rem
   }
   .menu__link {
-    color: #000;
     font-size: 1.25rem
   }
   .icon-menu {
@@ -769,7 +845,7 @@ h6 {
     position: absolute;
     width: 100%;
     height: .125rem;
-    background-color: #000
+    background-color: #d6cba5
   }
   .icon-menu::before {
     top: 0
@@ -927,8 +1003,8 @@ h6 {
   .hero__title {
     display: block;
     position: absolute;
-    top: 3.75rem;
-    right: 3.75rem;
+    top: 25%;
+    right: 1.875rem;
     font-weight: 700;
     font-size: 2.25rem;
     color: rgba(243,146,0,.72)
@@ -1021,7 +1097,8 @@ h6 {
     height: 25rem
   }
   .hero__title {
-    font-size: 1.875rem
+    font-size: 1.875rem;
+    right: .9375rem
   }
   .engineering-cbrn__image {
     height: 21.875rem
@@ -1165,8 +1242,8 @@ h6 {
     fill: #d6cba5
   }
   .brigades__column:hover .brigades__logo {
-    -webkit-transform: rotate(-360deg) scale(1.4);
-    transform: rotate(-360deg) scale(1.4)
+    -webkit-transform: scale(1.4);
+    transform: scale(1.4)
   }
   .brigades__column:hover .brigades__name::before {
     width: 100%
