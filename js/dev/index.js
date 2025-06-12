@@ -4414,17 +4414,25 @@ function initSliders() {
           spaceBetween: 20
           // autoHeight: true,
         },
+        540: {
+          slidesPerView: 1.8,
+          spaceBetween: 20
+        },
         768: {
-          slidesPerView: 1.7,
+          slidesPerView: 2.2,
           spaceBetween: 20
         },
         992: {
-          slidesPerView: 2.7,
-          spaceBetween: 40
+          slidesPerView: 2.8,
+          spaceBetween: 20
         },
         1268: {
-          slidesPerView: 3.3,
-          spaceBetween: 50
+          slidesPerView: 4,
+          spaceBetween: 30
+        },
+        1440: {
+          slidesPerView: 4.3,
+          spaceBetween: 40
         }
       },
       // Події
