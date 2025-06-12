@@ -4423,8 +4423,8 @@ function initSliders() {
           spaceBetween: 40
         },
         1268: {
-          slidesPerView: 3,
-          spaceBetween: 60
+          slidesPerView: 3.3,
+          spaceBetween: 50
         }
       },
       // Події
