@@ -819,6 +819,7 @@ body {
 @media (max-width: 116.875em){
   .item-vacancies__frame {
     padding: 1.5625rem 1.25rem 0 1.25rem;
+    margin-bottom: 1.5625rem;
   }
 }
 @media (max-width: 78.125em){
@@ -1216,6 +1217,10 @@ body {
   .slider-vacancies__btn::before {
     width: 1.0625rem;
     height: 1.8125rem;
+  }
+  .item-vacancies__frame {
+    adding: 1.25rem 0.9375rem 0 0.9375rem;
+    margin-bottom: 1.25rem;
   }
   .photo-block {
     display: none;
